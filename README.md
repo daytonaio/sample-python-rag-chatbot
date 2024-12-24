@@ -40,7 +40,8 @@ Users can revisit previous interactions for reference.
 1. **Install Daytona**: Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
 2. **Create the Workspace**:  
    ```  
-   daytona create https://github.com/VishalPokharel/sample-python-rag-chatbot.git
+   daytona create https://github.com/daytonaio/sample-python-rag-chatbot.git
+
    ```  
 
 3. **Set up the environment variables by creating a ```.env``` file in the backend directory and add given details:**: 
