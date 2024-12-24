@@ -51,10 +51,12 @@ Users can revisit previous interactions for reference.
 
 4. **Start the Application**:  
    Navigate to backend folder 
-      ```poetry run uvicorn src.app:app --reload
+      ```
+      poetry run uvicorn src.app:app --reload
       ```  
    Navigate to frontend folder 
-      ```npm start
+      ```
+      npm start
       ```  
 
 ## Technologies Used
