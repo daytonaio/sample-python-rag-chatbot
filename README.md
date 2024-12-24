@@ -1,34 +1,66 @@
-This repository contains a README file sample for Daytona Samples and the MIT License.
+# <p align="center">Osho chatbot Rag implementation sample </p>
 
-It can be used as a template to create sample repositories that can be added into [Daytona](https://github.com/daytonaio/daytona).
+## Overview
+This project aims to create an AI-powered chatbot that mimics the conversational style and philosophical teachings of Osho, a renowned spiritual leader. By leveraging Retrieval-Augmented Generation (RAG), the chatbot provides contextually accurate responses derived from Osho's books and teachings stored as a knowledge base.
 
-Once you finish your sample and it gets merged, you can open a PR in the Daytona repo and submit the sample into the [index file](https://github.com/daytonaio/daytona/blob/main/hack/samples/index.json).
 
-# Sample <LANGUAGE/FRAMEWORK>
+# Dataset 
+The dataset is sourced by scraping the comprehensive collection of Osho's books available at https://www.alaalsayid.com/ebooks/OSHO%20pdf/.
+These PDFs are preprocessed to extract clean, structured text suitable for embedding generation and efficient retrieval.
 
-Sample description
+## ✨ Features  
 
----
+**Knowledge Base Construction:**
+Text from the books is converted into embeddings using a vectorizer (e.g., Sentence Transformers).
+A vector database is employed to store the embeddings, enabling rapid retrieval of context-relevant information.
 
+**Retrieval-Augmented Generation (RAG):**
+Combines retrieval and generation to ground chatbot responses in Osho’s teachings.
+The model first retrieves relevant excerpts from the vector database and incorporates them into dynamically generated responses, ensuring both relevance and coherence.
+
+**Backend Development:**
+Built using FastAPI, providing RESTful APIs for:
+Querying the chatbot.
+Retrieving contextual excerpts.
+
+
+**Frontend Interface:**
+A React-based user interface designed for an immersive and interactive experience.
+Includes features such as real-time chat, conversation history, and accessibility enhancements.
+
+**Persistent Conversation History:**
+Chat history is stored and reused to maintain conversational continuity.
+Users can revisit previous interactions for reference.
+
+-
 ## 🚀 Getting Started  
 
 ### Open Using Daytona  
 
 1. **Install Daytona**: Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
 2. **Create the Workspace**:  
-   ```bash  
-   daytona create <SAMPLE_REPO_URL> 
+   ```  
+   daytona create https://github.com/VishalPokharel/sample-python-rag-chatbot.git
    ```  
 
-... MORE STEPS IF NEEDED ...
+3. **Add 3000 as forwarded ports.**
+3. **Set up the environment variables by creating a ```.env``` file in the backend directory and add given details:**: 
+   ```  
+   GROQ_API_KEY=<YOUR_GROQ_API_KEY>
+   ```  
 
 4. **Start the Application**:  
-   ```bash  
-   command to start the app
-   ```  
+   Navigate to backend folder 
+      ```poetry run uvicorn src.app:app --reload
+      ```  
+   Navigate to frontend folder 
+      ```npm start
+      ```  
 
----
+## Technologies Used
 
-## ✨ Features  
-
-List of sample features (e.g. realtime chat app, standardized development environment with devcontainers)
+- **Daytona**: Development environment manager.  
+- **React**: Frontend library for building user interfaces.    
+- **Groq API**: Fast AI interface.
+- **fastapi**: For restful API.  
+- 
