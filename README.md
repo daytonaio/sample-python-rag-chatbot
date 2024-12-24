@@ -43,7 +43,6 @@ Users can revisit previous interactions for reference.
    daytona create https://github.com/VishalPokharel/sample-python-rag-chatbot.git
    ```  
 
-3. **Add 3000 as forwarded ports.**
 3. **Set up the environment variables by creating a ```.env``` file in the backend directory and add given details:**: 
    ```  
    GROQ_API_KEY=<YOUR_GROQ_API_KEY>
